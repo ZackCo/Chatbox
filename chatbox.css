@@ -1,0 +1,126 @@
+#chatbox {
+    height: 20em;
+    width:20em;
+    bottom:0;
+    right:1em;
+    position:absolute;
+    background-color: #eeeeee;
+    
+    margin-top: 2em;
+    //outline: black solid medium;
+    border-radius: 1em;
+    //animation: show 2s ease;
+}
+
+#chatbox-header-bar {
+    width: 100%;
+    height: 2em;
+    
+    background-color: #eeeeee;
+    text-align: center;
+    vertical-align: middle;
+    font-family: sans-serif;
+    
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    
+    border-bottom: 1px solid #dddddd;
+    
+    z-index: 2;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#chatbox-header-bar:hover {
+    background-color: #cccccc;
+}
+
+#chatbox-input {
+    width:100%;
+    height: 2em;
+    
+    border: 0px;
+    background-color: #dddddd;
+    
+    position: absolute;
+    bottom:0;
+}
+
+#chatbox-input:hover {
+    background-color: #cdcdcd;
+}
+
+#chatbox-content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    bottom: 2em;
+    
+    overflow-y: hidden;
+    max-height: 80%;
+    display: flex;
+    flex-direction: column-reverse;
+    z-index: 1;
+    
+    margin-right: 10px;
+}
+
+.chatbox-message-container {
+    width: 100%;
+    height:auto;
+    min-height: 2em;
+    text-align: left;
+    padding: 2px 0;
+}
+
+.chatbox-message-container.chatbox-origin-local {
+    text-align: right !important;
+}
+
+.chatbox-message-container.chatbox-origin-remote {
+    text-align: left !important;
+}
+
+.chatbox-message {
+    height: auto;
+    min-height: 1em;
+    width: auto;
+    min-width: 1em;
+    max-width: 90%;
+    padding: 5px;
+    border-width: 10px;
+    display: inline-block;
+    right: 0;
+    text-align: center;
+    word-wrap: normal;
+    overflow-x: hidden;
+    
+}
+
+.chatbox-message.chatbox-origin-local {
+    background-color: lightgrey;
+    border-radius: 8px 0 0 8px;
+    text-align: right;
+}
+
+.chatbox-message.chatbox-origin-remote {
+    background-color: #98ff98; 
+    border-radius: 0 8px 8px 0;
+    text-align: left;
+}
+
+.chatbox-message.chatbox-origin-remote:hover {
+    background-color: #88ef88
+}
+
+@keyframes show {
+    from {height: 3em;}
+    to   {height: 20em;}
+}
+
+@keyframes hide {
+    from {height: 20em;}
+    to   {height: 3em;}
+}
